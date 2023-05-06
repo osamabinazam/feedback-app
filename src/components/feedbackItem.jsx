@@ -1,5 +1,6 @@
 // import { useState } from "react"
-
+import Card from "./shared/Card"
+import PropTypes from 'prop-types'
 
 function FeedBackItem({ item } ){
 
@@ -16,11 +17,15 @@ function FeedBackItem({ item } ){
     // }
 
     return(
-        <div className="card">
+        <Card reverse={true}>
             <div className="num-display">{item.rating}</div>
             <div className="text-dispaly">{item.text}</div>
-        </div>
+        </Card>
     )
+}
+
+FeedBackItem.propType = {
+    item:PropTypes.object.isRequired,
 }
 
 export default FeedBackItem
