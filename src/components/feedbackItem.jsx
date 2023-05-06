@@ -1,8 +1,9 @@
 // import { useState } from "react"
 import Card from "./shared/Card"
 import PropTypes from 'prop-types'
+import {FaTimes} from 'react-icons/fa'
 
-function FeedBackItem({ item } ){
+function FeedBackItem({ item, handleDelete} ){
 
 
     //  Component level states
@@ -17,14 +18,16 @@ function FeedBackItem({ item } ){
     // }
 
     return(
-        <Card reverse={true}>
+        <Card>
             <div className="num-display">{item.rating}</div>
+            <button className="close" onClick={() =>handleDelete(item.id)} > 
+            <FaTimes color="purple"/></button>
             <div className="text-dispaly">{item.text}</div>
         </Card>
     )
 }
 
-FeedBackItem.propType = {
+ FeedBackItem.propType = {
     item:PropTypes.object.isRequired,
 }
 
