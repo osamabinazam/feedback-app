@@ -1,3 +1,8 @@
+// import { motion } from 'framer-motion';
+// import { AnimatePresence } from 'framer-motion';
+// import AnimatePresence from './node_modules/framer-motion/dist/es/components/AnimatePresence/index.mjs';
+
+
 import React from 'react'
 import ReactDOM from 'react-dom'
 import FeedBackItem from "./feedbackItem";
@@ -13,15 +18,25 @@ function FeedbackList({feedback, handleDelete}){
 
 
     return (
-        <div className="feedback-list">
+        
+        <div className="feedback-list">            
+            {/* <AnimatePresence> */}
             {
-                feedback.map((item) => (
-                   <FeedBackItem 
-                   key={item.id} 
-                   item={item} 
-                   handleDelete= {handleDelete}  />
+            feedback.map((item) => (
+                    // <motion.div 
+                        // key={item.id}
+                        // initial={{ opacity: 0}}
+                        // animate={{ opacity: 1}}
+                        // exit={{opacity:0}}
+                    // >
+                    <FeedBackItem 
+                    key={item.id} 
+                    item={item} 
+                    handleDelete= {handleDelete}  />
+                    // </motion.div> 
                 ))
             }
+            {/* </AnimatePresence> */}
         </div>
     );
 
