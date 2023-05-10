@@ -1,4 +1,5 @@
-
+import React from 'react'
+import ReactDOM from 'react-dom'
 import FeedBackItem from "./feedbackItem";
 import PropTypes from 'prop-types'
 
@@ -7,7 +8,7 @@ import PropTypes from 'prop-types'
 function FeedbackList({feedback, handleDelete}){
 
     if (!feedback || feedback.length === 0){
-        return <p>No feedback yet</p>
+        return <>No feedback yet</>
     }
 
 
