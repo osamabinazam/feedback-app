@@ -1,21 +1,15 @@
-// import { motion } from 'framer-motion';
-// import { AnimatePresence } from 'framer-motion';
-// import AnimatePresence from './node_modules/framer-motion/dist/es/components/AnimatePresence/index.mjs';
 
-
+import { motion } from 'framer-motion';
 import React from 'react'
-import ReactDOM from 'react-dom'
+// import ReactDOM from 'react-dom'
 import FeedBackItem from "./feedbackItem";
 import PropTypes from 'prop-types'
-
-
 
 function FeedbackList({feedback, handleDelete}){
 
     if (!feedback || feedback.length === 0){
-        return <>No feedback yet</>
+        return <p>No feedback yet</p>
     }
-
 
     return (
         
@@ -23,22 +17,22 @@ function FeedbackList({feedback, handleDelete}){
             {/* <AnimatePresence> */}
             {
             feedback.map((item) => (
-                    // <motion.div 
-                        // key={item.id}
-                        // initial={{ opacity: 0}}
-                        // animate={{ opacity: 1}}
-                        // exit={{opacity:0}}
-                    // >
+                    <motion.div 
+                        key={item.id}
+                        initial={{ opacity: 0}}
+                        animate={{ opacity: 1}}
+                        exit={{opacity:0}}
+                    >
                     <FeedBackItem 
                     key={item.id} 
                     item={item} 
                     handleDelete= {handleDelete}  />
-                    // </motion.div> 
+                    </motion.div> 
                 ))
             }
             {/* </AnimatePresence> */}
         </div>
-    );
+    )
 
 }
 
