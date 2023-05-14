@@ -1,14 +1,24 @@
 import React from 'react'
-
+import Card from '../components/shared/Card'
 function About() {
   return (
-    <div>
-      This is About Pages From Pages
-      <h2>
-        Hello
-      </h2>
+    <Card>
+      <div className="about">
+        <h1>About This Project</h1>
 
-    </div>
+        <p>
+            This is a react app to leave feedback for a product and service
+        </p>
+
+        <p>
+          Version: 1.0.0
+        </p>
+        <p>
+          <a href="/">Back to home</a>
+        </p>
+      </div>
+
+    </Card>
   )
 }
 

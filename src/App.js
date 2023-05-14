@@ -1,5 +1,4 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 import { v4 as uuidv4 } from "uuid";
 import { useState } from "react";

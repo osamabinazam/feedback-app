@@ -40,6 +40,7 @@ function FeedbackForm({handleAdd}) {
                 text,
                 rating,
             }
+            console.log(rating)
             handleAdd(newFeedback)
             setText('')
         }
