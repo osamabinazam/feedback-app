@@ -8,6 +8,7 @@ import FeedbackList from "./components/FeedbackList";
 import FeedbackStat from "./components/FeedbackStat";
 import FeedbackForm from "./components/FeedbackForm";
 import About from './pages/About';
+import AboutLinkIcon from './components/AboutLinkIcon';
 
 
 function App(){
@@ -47,7 +48,9 @@ function App(){
                     </>
                 } />
                 </Routes>
+                
             </div>
+            <AboutLinkIcon />
         </Router>
     );
 }
