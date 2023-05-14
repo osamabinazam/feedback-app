@@ -49,8 +49,9 @@ function App(){
                         </>
                     } />
                     <Route path="/about" element={<About />} />
-                    {/* Path parameters  */}
+                    {/*  Path parameters and redirecting*/}
                     {/* <Route path="/post/:id/:name" element={<Post />} /> */}
+                    
                 </Routes>
                 
             </div>
